@@ -1,0 +1,246 @@
+@import _variables.sass
+
+*
+    margin: 0
+    padding: 0
+    font-family: $font-stack
+html
+    scroll-behavior: smooth
+    overflow-x: hidden
+    body
+        text-align: center
+        letter-spacing: 2px
+        .flex-row
+            display: flex
+        .flex-col
+            display: flex
+            flex-flow: column
+        .wrap
+            flex-flow: wrap
+        section
+            .section-title
+                margin-top: 20px
+                font-size: 2rem
+                color: $secondary-color
+            .container
+                table, tr, th, td
+                    margin: auto
+                    border: 3px solid white
+        a.cta
+            padding: 30px
+            margin-bottom: 60px
+            color: $primary-color
+            background: $secondary-color
+            display: inline-block
+            text-decoration: none
+            font-size: large
+        a.cta:hover
+            color: $secondary-color
+            background: $tertiary-color
+            border: 1px solid $primary-color
+            transition: 0.5s
+        section#error404
+            display: flex
+            height: 100vh
+            width: 100vw
+            align-content: center
+            align-items: center
+            .content
+                width: auto
+                margin: auto
+                justify-content: space-evenly
+                img
+                    width: 200px
+                    height: 200px
+                .explain
+                    display: flex
+                    flex-flow: column
+                    justify-content: center
+                    padding: 30px
+                    a.cta
+                        margin: 0            
+
+        section#hero
+            display: flex
+            height: 100vh
+            width: 100vw
+            background: $primary-color
+            color: $secondary-color
+            align-items: center
+            align-content: center 
+            .inner-section
+                width: auto
+                margin: auto
+                display: inline-flex
+                flex-flow: column
+                border: 1px solid $secondary-color
+                border-radius: 5%
+                padding: 25px
+                img
+                    max-width: 150px
+                    margin: auto
+        section#me
+            border-bottom: 2px dashed $primary-color
+            padding: 35px 0
+            #technologies
+                width: 70%
+                margin: auto
+                img
+                    width: 32px
+                    margin: auto
+            .container
+                .title
+                    color: $tertiary-color
+                margin: 25px
+            .center
+                margin: auto
+            table th, td
+                border-bottom: $secondary-color solid 1px
+                width: 100%
+        section#projects
+            .container
+                justify-content: space-evenly
+                padding: 70px 0
+                img
+                    width: 32px
+                a.card
+                    color: $primary-color
+                    text-decoration: none
+                    display: flex
+                    flex-flow: column  
+                    min-height: 350px
+                    justify-content: space-between
+                    width: 350px
+                    border: 2.5px solid $tertiary-color
+                    margin: 2.5%
+                    .card-top
+                        letter-spacing: 3px
+                        h1.card-title
+                            border-bottom: 2px solid $tertiary-color
+                            color: $tertiary-color
+                            padding: 2px 0
+                        p
+                            padding: 15px
+                    .card-bottom
+                        padding: 5px
+                        .status-bar
+                            background: $secondary-color
+                            height: 15px
+                            .status
+                                background: $tertiary-color             
+                                height: 15px
+        section#contact-me
+            background: $tertiary-color
+            form
+                margin: 0 20%
+                padding: 25px 0
+                display: flex
+                flex-flow: column
+                input,textarea
+                    border: 1px solid $primary-color
+                    border-radius: 5px
+                    margin: 5px 0
+                    font-size: x-large
+                    background: $tertiary-color
+                    color: $secondary-color
+                input::placeholder,textarea::placeholder
+                    color: $primary-color  
+                input:focus, textarea:focus
+                    outline: none
+                    border: 1px solid $secondary-color
+                    border-radius: 5px
+                    color: $secondary-color
+                input:focus::placeholder,textarea:focus::placeholder
+                    color: $secondary-color  
+                input
+                    &[type=submit]
+                        border: 2px solid $secondary-color
+                input:hover,input:focus
+                    &[type=submit]
+                        background: $secondary-color
+                        color: $tertiary-color
+        footer
+            background: $secondary-color
+            padding: 5px 0
+            justify-content: space-evenly
+            h1
+                font-size: medium
+                margin: auto 0
+            img
+                width: 32px
+                height: 32px
+                margin: auto 0
+        button#show
+            position: fixed
+            top: 10px
+            right: 10px
+            color: $tertiary-color
+            background: $secondary-color
+            z-index: 1
+            text-align: center
+            appearance: none
+            transition: 0.05s
+            border-radius: 50%
+            border: none
+            width: 60px
+            height: 60px
+        button#show::after
+            content: "☰"
+            font-size: xx-large
+        #menu
+            display: none
+            position: fixed
+            z-index: 2
+            top: 0
+            left: 0
+            width: 100%
+            height: fit-content
+            overflow: auto
+            background: $secondary-color
+            transition: all 5s
+            button#hide
+                display: inline-block
+                padding: 15px
+                font-size: x-large
+                text-align: center
+                font-weight: bold
+                color: $tertiary-color
+                background: $secondary-color
+                border: none
+                align-self: flex-end
+            button#hide::after
+                content: "╳"
+            .inner-menu
+                margin: 50px
+                h1 span, h2 span
+                    color: $tertiary-color
+                .nav
+                    margin-top: 20px
+                    display: inline-flex
+                    a
+                        color: $primary-color
+                        text-decoration: none
+                        padding: 20px
+                    a:hover, a.active:hover
+                        color: $secondary-color
+                        background: $tertiary-color
+                    a.active
+                        color: $tertiary-color
+                        background: $primary-color
+// Large desktops and laptops
+@media (min-width: 1390px)
+    
+// Landscape tablets and medium desktops
+@media (min-width: 992px) and (max-width: 1289px)
+    
+// Portrait tablets and small desktops
+@media (min-width: 768px) and (max-width: 991px)
+
+// Landscape phones and portrait tablets
+@media (max-width: 767px)
+    body
+        section#contact-me
+            form
+                margin: 0 5%
+// Portrait phones and smaller
+@media (max-width: 480px)
