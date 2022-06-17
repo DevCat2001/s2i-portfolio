@@ -1,0 +1,287 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Share Tech", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+html body {
+  text-align: center;
+  letter-spacing: 2px;
+}
+html body .flex-row {
+  display: flex;
+}
+html body .flex-col {
+  display: flex;
+  flex-flow: column;
+}
+html body .wrap {
+  flex-flow: wrap;
+}
+html body section .section-title {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: yellow;
+}
+html body section .container table, html body section .container tr, html body section .container th, html body section .container td {
+  margin: auto;
+  border: 3px solid white;
+}
+html body a.cta {
+  padding: 30px;
+  margin-bottom: 60px;
+  color: #000;
+  background: yellow;
+  display: inline-block;
+  text-decoration: none;
+  font-size: large;
+}
+html body a.cta:hover {
+  color: yellow;
+  background: #7510f7;
+  border: 1px solid #000;
+  transition: 0.5s;
+}
+html body section#error404 {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-content: center;
+  align-items: center;
+}
+html body section#error404 .content {
+  width: auto;
+  margin: auto;
+  justify-content: space-evenly;
+}
+html body section#error404 .content img {
+  width: 200px;
+  height: 200px;
+}
+html body section#error404 .content .explain {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 30px;
+}
+html body section#error404 .content .explain a.cta {
+  margin: 0;
+}
+html body section#hero {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #000;
+  color: yellow;
+  align-items: center;
+  align-content: center;
+}
+html body section#hero .inner-section {
+  width: auto;
+  margin: auto;
+  display: inline-flex;
+  flex-flow: column;
+  border: 1px solid yellow;
+  border-radius: 5%;
+  padding: 25px;
+}
+html body section#hero .inner-section img {
+  max-width: 150px;
+  margin: auto;
+}
+html body section#me {
+  border-bottom: 2px dashed #000;
+  padding: 35px 0;
+}
+html body section#me #technologies {
+  width: 70%;
+  margin: auto;
+}
+html body section#me #technologies img {
+  width: 32px;
+  margin: auto;
+}
+html body section#me .container {
+  margin: 25px;
+}
+html body section#me .container .title {
+  color: #7510f7;
+}
+html body section#me .center {
+  margin: auto;
+}
+html body section#me table th, html body section#me td {
+  border-bottom: yellow solid 1px;
+  width: 100%;
+}
+html body section#projects .container {
+  justify-content: space-evenly;
+  padding: 70px 0;
+}
+html body section#projects .container img {
+  width: 32px;
+}
+html body section#projects .container a.card {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-flow: column;
+  min-height: 350px;
+  justify-content: space-between;
+  width: 350px;
+  border: 2.5px solid #7510f7;
+  margin: 2.5%;
+}
+html body section#projects .container a.card .card-top {
+  letter-spacing: 3px;
+}
+html body section#projects .container a.card .card-top h1.card-title {
+  border-bottom: 2px solid #7510f7;
+  color: #7510f7;
+  padding: 2px 0;
+}
+html body section#projects .container a.card .card-top p {
+  padding: 15px;
+}
+html body section#projects .container a.card .card-bottom {
+  padding: 5px;
+}
+html body section#projects .container a.card .card-bottom .status-bar {
+  background: yellow;
+  height: 15px;
+}
+html body section#projects .container a.card .card-bottom .status-bar .status {
+  background: #7510f7;
+  height: 15px;
+}
+html body section#contact-me {
+  background: #7510f7;
+}
+html body section#contact-me form {
+  margin: 0 20%;
+  padding: 25px 0;
+  display: flex;
+  flex-flow: column;
+}
+html body section#contact-me form input, html body section#contact-me form textarea {
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: x-large;
+  background: #7510f7;
+  color: yellow;
+}
+html body section#contact-me form input::placeholder, html body section#contact-me form textarea::placeholder {
+  color: #000;
+}
+html body section#contact-me form input:focus, html body section#contact-me form textarea:focus {
+  outline: none;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  color: yellow;
+}
+html body section#contact-me form input:focus::placeholder, html body section#contact-me form textarea:focus::placeholder {
+  color: yellow;
+}
+html body section#contact-me form input[type=submit] {
+  border: 2px solid yellow;
+}
+html body section#contact-me form input:hover[type=submit], html body section#contact-me form input:focus[type=submit] {
+  background: yellow;
+  color: #7510f7;
+}
+html body footer {
+  background: yellow;
+  padding: 5px 0;
+  justify-content: space-evenly;
+}
+html body footer h1 {
+  font-size: medium;
+  margin: auto 0;
+}
+html body footer img {
+  width: 32px;
+  height: 32px;
+  margin: auto 0;
+}
+html body button#show {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: #7510f7;
+  background: yellow;
+  z-index: 1;
+  text-align: center;
+  appearance: none;
+  transition: 0.05s;
+  border-radius: 50%;
+  border: none;
+  width: 60px;
+  height: 60px;
+}
+html body button#show::after {
+  content: "☰";
+  font-size: xx-large;
+}
+html body #menu {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  overflow: auto;
+  background: yellow;
+  transition: all 5s;
+}
+html body #menu button#hide {
+  display: inline-block;
+  padding: 15px;
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+  color: #7510f7;
+  background: yellow;
+  border: none;
+  align-self: flex-end;
+}
+html body #menu button#hide::after {
+  content: "╳";
+}
+html body #menu .inner-menu {
+  margin: 50px;
+}
+html body #menu .inner-menu h1 span, html body #menu .inner-menu h2 span {
+  color: #7510f7;
+}
+html body #menu .inner-menu .nav {
+  margin-top: 20px;
+  display: inline-flex;
+}
+html body #menu .inner-menu .nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 20px;
+}
+html body #menu .inner-menu .nav a:hover, html body #menu .inner-menu .nav a.active:hover {
+  color: yellow;
+  background: #7510f7;
+}
+html body #menu .inner-menu .nav a.active {
+  color: #7510f7;
+  background: #000;
+}
+
+@media (max-width: 767px) {
+  body section#contact-me form {
+    margin: 0 5%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
